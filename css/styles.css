@@ -96,13 +96,8 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 margin-right: 76px;
   }
-  .header-menu-link {
-    color: #2e2f42;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em 
-  }
+  
+  .header-menu-link:active,
   .header-menu-link:hover,
   .header-menu-link:focus {
     color: #404bbf;
@@ -115,8 +110,20 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 padding: 24px 0;
   }
-  .header-menu-link:hover {
+  .current {
     color: #404BBF;
+  }
+  
+  current::after {
+    content: "";
+    height: 48px;
+    width: 4px;
+    border-radius: 2px;
+background: #404BBF;
+position: absolute;
+left: 0;
+bottom: -1px;
+display: none;
   }
 .header-address-list {
   display: flex;
